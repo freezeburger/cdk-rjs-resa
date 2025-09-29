@@ -1,0 +1,42 @@
+{
+  "name": "@cdk/monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "knip": "knip",
+    "plop": "plop --plopfile tools/plop/plopfile.js",
+    "clines": "clines ./packages ./apps",
+    "build:packages": "turbo run build --filter=!playground",
+    "prebuild": "pnpm run clean",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "report:lint:html": "turbo run lint --concurrency=100% -- -f html -o reports/eslint/index.html",
+    "lint:changed": "turbo run lint --filter=...[origin/main]"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^24.5.2",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "clines": "^2.0.2",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "knip": "^5.64.1",
+    "plop": "^4.0.4",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.0",
+    "turbo": "^2.0.7",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.1"
+  }
+}

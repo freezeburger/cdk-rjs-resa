@@ -1,0 +1,13 @@
+// {{kebabCase name}}.service.ts
+export interface {{pascalCase name}}Service {
+  getState(): unknown;
+  setState(v: unknown): void;
+}
+
+export function create{{pascalCase name}}Service(): {{pascalCase name}}Service {
+  let _state: unknown = null;
+  return {
+    getState: () => _state,
+    setState: (v) => (_state = v),
+  };
+}

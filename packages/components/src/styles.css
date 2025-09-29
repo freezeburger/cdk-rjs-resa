@@ -1,0 +1,38 @@
+:root {
+  --btn-bg: var(--accent-500);
+  --btn-fg: white;
+  --btn-radius: var(--radius);
+  --focus-ring: var(--accent-500);
+}
+
+.cdk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-h, 36px);
+  padding: 0 12px;
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  box-shadow: var(--shadow-1);
+  border: 1px solid transparent;
+  transition: transform var(--duration) var(--easing), background var(--duration) var(--easing);
+}
+.cdk-btn:hover { transform: translateY(-1px) }
+.cdk-btn:active { transform: translateY(0) scale(.98) }
+.cdk-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+.cdk-btn.ghost {
+  background: transparent; color: inherit; border-color: rgba(0,0,0,.1);
+}
+
+.cdk-field { display: flex; flex-direction: column; gap: 4px; }
+.cdk-input {
+  height: var(--control-h, 36px);
+  padding: 0 10px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.12);
+  background: white;
+}
+.cdk-hint { font-size: 12px; opacity: .7; }
+.cdk-error { font-size: 12px; color: #b00020; }

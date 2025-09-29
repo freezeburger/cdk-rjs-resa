@@ -1,0 +1,8 @@
+{
+  "ignoreFiles": [
+    ".log", ".gitignore", ".csv", ".ini", ".env", ".LICENSE", ".gitmodules"
+  ],
+  "ignoreDirs": [
+    "node_modules", "dist", "build", "coverage", "logs", ".git", ".idea", ".vscode", "tmp", "out", "public", "static", "turbo"
+  ]
+}
