@@ -1,0 +1,1 @@
+import { render } from "@testing-library/react";import Page from "../{{pascalCase name}}.page"; test("renders",()=>{ const {getByText}=render(<Page/>); expect(getByText(/{{pascalCase name}} page/)).toBeTruthy(); });

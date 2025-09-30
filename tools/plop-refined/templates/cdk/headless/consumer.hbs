@@ -1,0 +1,1 @@
+import { create{{pascalCase headlessName}}Service } from "../services/{{kebabCase headlessName}}.service"; const svc=create{{pascalCase headlessName}}Service(); export const get{{pascalCase headlessName}}=()=>svc.get(); export const set{{pascalCase headlessName}}=(v:unknown)=>svc.set(v);

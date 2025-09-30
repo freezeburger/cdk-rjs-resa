@@ -1,0 +1,1 @@
+import { renderHook,act } from "@testing-library/react";import { use{{pascalCase name}} } from "../use{{pascalCase name}}.hook"; test("updates",()=>{ const {result}=renderHook(()=>use{{pascalCase name}}()); act(()=>result.current.setState(42)); expect(result.current.state).toBe(42); }); }
