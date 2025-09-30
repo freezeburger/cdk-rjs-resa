@@ -5,6 +5,7 @@
   "scripts": {
     "knip": "knip",
     "plop": "plop --plopfile tools/plop/plopfile.js",
+    "plop-adv": "plop --plopfile tools/plop-refined/plopfile.mjs",
     "clines": "clines ./packages ./apps",
     "build:packages": "turbo run build --filter=!playground",
     "prebuild": "pnpm run clean",
